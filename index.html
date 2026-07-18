@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeSupport Hub - Your Journey to Wellness Starts Here</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i> LifeSupport Hub
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#stories" class="nav-link">Success Stories</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Journey to Wellness Starts Here</h1>
+            <p>You're not alone. Every struggle is a stepping stone to a stronger you.</p>
+            <button class="cta-button" onclick="document.getElementById('resources').scrollIntoView({behavior: 'smooth'})">
+                Explore Resources
+            </button>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-element">🌱</div>
+            <div class="floating-element" style="animation-delay: 1s;">🌟</div>
+            <div class="floating-element" style="animation-delay: 2s;">💪</div>
+        </div>
+    </section>
+
+    <!-- Daily Motivation -->
+    <section class="motivation-section">
+        <h2>Today's Inspiration</h2>
+        <div class="motivation-card">
+            <p id="daily-quote">Loading today's motivation...</p>
+            <button class="small-btn" onclick="generateQuote()">New Quote</button>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <h2>Support & Resources</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <i class="fas fa-brain"></i>
+                <h3>Mental Health</h3>
+                <p>Access guides on anxiety, depression, stress management, and emotional wellbeing.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Career Support</h3>
+                <p>Navigate job transitions, interview tips, and professional development strategies.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-wallet"></i>
+                <h3>Financial Wellness</h3>
+                <p>Budget planning, debt management, and building a secure financial future.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-heart-pulse"></i>
+                <h3>Physical Health</h3>
+                <p>Fitness routines, nutrition tips, and habits for a healthier lifestyle.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-users"></i>
+                <h3>Relationships</h3>
+                <p>Build meaningful connections and improve communication with loved ones.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+            <div class="resource-card">
+                <i class="fas fa-book"></i>
+                <h3>Personal Growth</h3>
+                <p>Self-discovery, habit building, and unlocking your true potential.</p>
+                <a href="#" class="learn-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="stories">
+        <h2>Real Stories, Real Wins</h2>
+        <div class="stories-grid">
+            <div class="story-card">
+                <div class="story-avatar">👩‍💼</div>
+                <h3>Sarah's Career Transformation</h3>
+                <p>"I was lost and uncertain about my career path. With the right resources and community support, I found my passion and landed my dream job."</p>
+                <span class="story-author">- Sarah M.</span>
+            </div>
+            <div class="story-card">
+                <div class="story-avatar">👨‍💻</div>
+                <h3>Marcus Overcame Anxiety</h3>
+                <p>"The meditation tools and daily affirmations helped me manage my anxiety. Now I wake up with confidence and positivity."</p>
+                <span class="story-author">- Marcus K.</span>
+            </div>
+            <div class="story-card">
+                <div class="story-avatar">👩‍🎓</div>
+                <h3>Emma's Financial Freedom</h3>
+                <p>"I learned to budget smartly and invest in my future. This platform gave me the knowledge I needed to take control."</p>
+                <span class="story-author">- Emma R.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools -->
+    <section id="tools" class="tools">
+        <h2>Interactive Tools</h2>
+        <div class="tools-container">
+            <div class="tool-box">
+                <h3>💭 Daily Affirmation</h3>
+                <button class="tool-btn" onclick="showAffirmation()">Get Affirmation</button>
+                <p id="affirmation-text" style="margin-top: 15px; color: #7b68ee;"></p>
+            </div>
+            <div class="tool-box">
+                <h3>🧘 Breathing Exercise</h3>
+                <button class="tool-btn" onclick="startBreathingExercise()">Start Exercise</button>
+                <div id="breathing-guide" style="margin-top: 15px;"></div>
+            </div>
+            <div class="tool-box">
+                <h3>📊 Progress Tracker</h3>
+                <button class="tool-btn" onclick="showProgressTracker()">Track Progress</button>
+                <div id="progress-tracker" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <h2>Join Our Community</h2>
+        <div class="community-content">
+            <div class="community-info">
+                <h3>Connect, Share & Grow Together</h3>
+                <p>Our community is a safe space where people support each other through life's challenges. Share your stories, learn from others, and celebrate wins together.</p>
+                <ul class="community-features">
+                    <li>✓ Supportive peer community</li>
+                    <li>✓ Expert-verified content</li>
+                    <li>✓ Weekly challenges & events</li>
+                    <li>✓ Mentorship opportunities</li>
+                </ul>
+                <button class="cta-button" onclick="alert('Community feature coming soon!')">Join Community</button>
+            </div>
+            <div class="community-stats">
+                <div class="stat">
+                    <h4>50K+</h4>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat">
+                    <h4>200+</h4>
+                    <p>Resources</p>
+                </div>
+                <div class="stat">
+                    <h4>1000+</h4>
+                    <p>Success Stories</p>
+                </div>
+                <div class="stat">
+                    <h4>24/7</h4>
+                    <p>Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>support@lifesupporthub.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>1-800-SUPPORT (787-7687)</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Available Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 LifeSupport Hub. All rights reserved. | Made with ❤️ for you</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
