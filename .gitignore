@@ -1,0 +1,40 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.project
+.classpath
+
+# Node modules (if needed for future development)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build & Deployment
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# System files
+.directory
+.AppleDouble
+.LSOverride
